@@ -1,0 +1,12 @@
+* text=auto
+
+# Estes .aspx são documentos PDF originais: preservar todos os bytes.
+*.aspx binary
+*.pdf binary
+*.png binary
+*.PNG binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ttf binary

@@ -1,0 +1,53 @@
+# Build, dependências instaladas e caches
+/dist/
+node_modules/
+.cache/
+.npm/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+coverage/
+playwright-report/
+test-results/
+
+# Ferramentas baixadas e registros locais; preservar os scripts próprios de QA
+/.tools/*
+!/.tools/motion-preview.mjs
+!/.tools/validate-motion.mjs
+!/.tools/validate-motion-edges.mjs
+!/.tools/render-motion-evidence.mjs
+
+# Referências e evidências locais não utilizadas pelo site
+/docs/reference/
+/docs/qa/
+/docs/validation-*/
+/deixe meu portifolio identico a esse!!!.mp4
+
+# Segredos e configurações de autenticação
+.env
+.env.*
+.npmrc
+.netrc
+.pypirc
+credentials*.json
+token*.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Arquivos temporários e metadados do sistema/editor
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

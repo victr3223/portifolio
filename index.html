@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Victor Rogenare — Desenvolvedor Full Stack em formação. Conheça ConnectClass, NEXT, NEXT COIN, meus certificados e minha trajetória.">
+  <title>Victor | Desenvolvedor Full Stack</title>
+  <link rel="icon" type="image/png" href="assets/next-logo.png">
+  <link rel="preload" href="assets/fonts/poppins-400.ttf" as="font" type="font/ttf" crossorigin>
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('victor-theme') === 'light' ? 'light' : 'dark'; } catch {}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+  <div class="intro" aria-hidden="true">
+    <div class="intro-icons"><span data-icon="code"></span><span data-icon="user"></span><span data-icon="monitor"></span></div>
+    <p>Bem-vindo ao meu<br><strong>portfólio digital</strong></p>
+    <img src="assets/next-logo.png" alt="" class="next-logo">
+  </div>
+
+  <header class="site-header">
+    <div class="nav-wrap container">
+      <a href="#inicio" class="brand" aria-label="NEXT — início"><img class="next-logo" src="assets/next-logo.png" alt="NEXT" width="980" height="275"></a>
+      <nav class="navigation" id="navigation" aria-label="Navegação principal">
+        <a href="#inicio" class="active" aria-current="page">Início</a><a href="#sobre">Sobre</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a>
+      </nav>
+      <div class="header-actions"><button class="icon-button theme-toggle" aria-label="Ativar tema claro" title="Alternar tema"><span data-icon="sun"></span></button><button class="icon-button menu-toggle" aria-label="Abrir menu" aria-controls="navigation" aria-expanded="false"><span data-icon="menu"></span></button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span data-icon="sparkles"></span> Victor · pronto para criar</div>
+        <h1 id="hero-title">Desenvolvedor<br><span>Full Stack</span><span class="sr-only"> em formação</span></h1>
+        <p class="hero-role" aria-hidden="true"><span id="typed-role">Em formação</span><span class="type-caret">|</span></p>
+        <p class="hero-statement">Construindo soluções digitais para simplificar o dia a dia.</p>
+        <div class="chips"><span>HTML</span><span>JavaScript</span><span>Node.js</span><span>Python</span></div>
+        <div class="hero-buttons"><a class="button button-dark" href="#portfolio" data-open-tab="projetos">Projetos <span data-icon="external"></span></a><a class="button button-dark" href="#contato">Contacto <span data-icon="mail"></span></a></div>
+        <div class="social-icons" aria-label="Redes sociais">
+          <a href="https://github.com/victr3223" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Victor"><span data-icon="github"></span></a>
+          <a href="https://www.linkedin.com/in/victor-rogenare-ramos-hernandez-campos-509931352/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Victor"><span data-icon="linkedin"></span></a>
+          <a href="https://wa.me/5513996684872" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp"><span data-icon="phone"></span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Identidade NEXT, marca dos projetos de Victor">
+        <div class="art-halo"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="floating-code code-one">CSS</span><span class="floating-code code-two">HTML</span><span class="floating-code code-three">Python</span><span class="floating-symbol" data-icon="code"></span>
+        <img class="next-logo hero-logo" src="assets/next-logo.png" alt="NEXT" width="980" height="275">
+        <div class="art-caption">IDEIAS EM MOVIMENTO<span>código · automação · inteligência artificial</span></div>
+      </div>
+    </section>
+
+    <section class="about container section" id="sobre" data-reveal-sequence aria-labelledby="about-title">
+      <div class="section-heading"><h2 class="reveal" id="about-title">Sobre mim</h2><p class="reveal"><span data-icon="sparkles"></span> Transformando ideias em experiências digitais <span data-icon="sparkles"></span></p></div>
+      <div class="about-layout">
+        <div class="about-copy" data-reveal-sequence>
+          <h3 class="reveal from-left"><span>Olá, eu sou</span><br>Victor Rogenare</h3>
+          <p class="reveal from-left">Sou estudante do Ensino Médio e do curso Técnico Integrado em Desenvolvimento de Sistemas. Estudo programação desde pequeno e sonho em criar programas que ajudem as pessoas no dia a dia.</p>
+          <p class="reveal from-left">Tenho me interessado cada vez mais por inteligência artificial e pelo impacto dela no desenvolvimento. Gosto de investigar problemas e criar soluções úteis. Acredito que, quando existe um problema, também existe uma oportunidade para um desenvolvedor criar uma solução.</p>
+          <div class="about-buttons"><a class="reveal from-left button button-primary" href="assets/curriculo-victor.pdf" download="Curriculo-Victor.pdf"><span data-icon="file"></span> Download CV</a><a class="reveal from-left button button-outline" href="#portfolio" data-open-tab="projetos"><span data-icon="code"></span> Ver Projetos</a></div>
+        </div>
+        <div class="portrait-wrap reveal from-right"><img class="portrait" src="assets/victor.jpeg" alt="Victor Rogenare" width="677" height="636" loading="lazy"></div>
+      </div>
+      <div class="stats-grid" data-reveal-sequence data-reveal-grid>
+        <a href="#portfolio" class="stat-card reveal" data-open-tab="projetos"><div><span class="round-icon" data-icon="code"></span><strong>3</strong></div><h3>Projetos em destaque</h3><p>Ideias que se tornam soluções <span>↗</span></p></a>
+        <a href="#portfolio" class="stat-card reveal" data-open-tab="certificados"><div><span class="round-icon" data-icon="award"></span><strong id="certificate-count">5</strong></div><h3>Certificados</h3><p>Aprendizado em evolução <span>↗</span></p></a>
+        <a href="#trajetoria" class="stat-card reveal"><div><span class="round-icon" data-icon="globe"></span><strong>7<span> meses</span></strong></div><h3>Experiência freelancer</h3><p>Atendimento e trabalho em equipe <span>↗</span></p></a>
+      </div>
+      <div class="highlights-grid" data-reveal-sequence data-reveal-grid id="trajetoria">
+        <button class="highlight-card reveal" data-highlight="objetivo"><span class="round-icon" data-icon="user"></span><h3>Objetivo</h3><p>Full Stack, automação e IA</p><span class="card-arrow">↗</span></button>
+        <button class="highlight-card reveal" data-highlight="experiencia"><span class="round-icon" data-icon="code"></span><h3>Experiência</h3><p>Conexões que fazem a diferença</p><span class="card-arrow">↗</span></button>
+        <button class="highlight-card reveal" data-highlight="formacao"><span class="round-icon" data-icon="award"></span><h3>Formação</h3><p>4º semestre do curso técnico</p><span class="card-arrow">↗</span></button>
+        <button class="highlight-card reveal" data-highlight="vivencias"><span class="round-icon" data-icon="globe"></span><h3>Vivências</h3><p>Tecnologia além da sala de aula</p><span class="card-arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="portfolio container section" id="portfolio" data-reveal-sequence aria-labelledby="portfolio-title">
+      <div class="section-heading"><h2 class="reveal" id="portfolio-title">Vitrine de Portfólio</h2><p class="reveal">Explore projetos, certificações e tecnologias que refletem minha evolução<br class="desktop-break"> no desenvolvimento de soluções digitais.</p></div>
+      <div class="tabs reveal" id="portfolio-tabs" role="tablist" aria-label="Explorar portfólio">
+        <button role="tab" id="tab-projetos" aria-selected="true" aria-controls="panel-projetos" data-tab="projetos"><span data-icon="code"></span>Projetos</button>
+        <button role="tab" id="tab-certificados" aria-selected="false" aria-controls="panel-certificados" data-tab="certificados" tabindex="-1"><span data-icon="award"></span>Certificados</button>
+        <button role="tab" id="tab-tecnologias" aria-selected="false" aria-controls="panel-tecnologias" data-tab="tecnologias" tabindex="-1"><span data-icon="layers"></span>Stack Tecnológica</button>
+      </div>
+      <div class="tab-panel" id="panel-projetos" role="tabpanel" tabindex="0" aria-labelledby="tab-projetos"><div class="project-grid" data-reveal-sequence data-reveal-grid data-reveal-after="#portfolio-tabs" id="projects"></div></div>
+      <div class="tab-panel" id="panel-certificados" role="tabpanel" tabindex="0" aria-labelledby="tab-certificados" hidden><div class="certificate-grid" data-reveal-sequence data-reveal-grid data-reveal-after="#portfolio-tabs" id="certificates"></div></div>
+      <div class="tab-panel" id="panel-tecnologias" role="tabpanel" tabindex="0" aria-labelledby="tab-tecnologias" hidden><div class="technology-grid" data-reveal-sequence data-reveal-grid data-reveal-after="#portfolio-tabs" id="technologies"></div><p class="tech-note reveal reveal-small">IA como apoio ao desenvolvimento, à prototipação e aos testes. Aprendizado contínuo, sem percentuais de domínio.</p></div>
+    </section>
+
+    <section class="contact section" id="contato" data-reveal-sequence aria-labelledby="contact-title">
+      <div class="section-heading container"><h2 class="reveal" id="contact-title">Contacte-me</h2><p class="reveal">Tem uma ideia em mente? Vamos conversar e construir algo útil.</p></div>
+      <div class="contact-layout" data-reveal-sequence data-reveal-after="#contact-title">
+        <div class="contact-left panel reveal from-left">
+          <h3>Vamos conversar <span data-icon="send"></span></h3><p class="contact-intro">Compartilhe ideias sobre desenvolvimento, automação ou inteligência artificial. Vamos encontrar uma solução juntos.</p>
+          <ul class="contact-info"><li><span data-icon="phone"></span><a href="https://wa.me/5513996684872" target="_blank" rel="noopener noreferrer">+55 13 99668-4872</a></li><li><span data-icon="mail"></span><a href="mailto:victornext32@gmail.com">victornext32@gmail.com</a></li><li><span data-icon="pin"></span>Praia Grande, SP</li></ul>
+          <form id="contact-form" data-reveal-sequence>
+            <label class="reveal reveal-small input-with-icon"><span data-icon="user"></span><span class="sr-only">O seu nome</span><input name="name" placeholder="O seu nome" autocomplete="name" required maxlength="100"></label>
+            <label class="reveal reveal-small input-with-icon"><span data-icon="mail"></span><span class="sr-only">O seu e-mail</span><input name="email" type="email" placeholder="O seu e-mail" autocomplete="email" required maxlength="150"></label>
+            <label class="reveal reveal-small input-with-icon textarea"><span data-icon="message"></span><span class="sr-only">A sua mensagem</span><textarea name="message" placeholder="A sua mensagem" required maxlength="4000" rows="4"></textarea></label>
+            <button class="reveal reveal-small button button-primary full-width" type="submit"><span data-icon="send"></span> Enviar mensagem</button>
+            <p class="form-note" id="contact-feedback" role="status">Abre seu aplicativo de e-mail com a mensagem preenchida.</p>
+          </form>
+          <div class="connect-panel reveal reveal-small" data-reveal-sequence><h4>Fale comigo</h4><a class="connect-link reveal reveal-small" href="mailto:victornext32@gmail.com"><span class="round-icon" data-icon="mail"></span><span>E-mail profissional<small>victornext32@gmail.com</small></span><span>↗</span></a><div class="contact-social-grid" data-reveal-sequence data-reveal-grid><a class="reveal reveal-small" href="https://github.com/victr3223" target="_blank" rel="noopener noreferrer"><span data-icon="github"></span>GitHub <span>↗</span></a><a class="reveal reveal-small" href="https://www.linkedin.com/in/victor-rogenare-ramos-hernandez-campos-509931352/" target="_blank" rel="noopener noreferrer"><span data-icon="linkedin"></span>LinkedIn <span>↗</span></a><a class="reveal reveal-small" href="https://wa.me/5513996684872" target="_blank" rel="noopener noreferrer"><span data-icon="phone"></span>WhatsApp <span>↗</span></a><a class="reveal reveal-small" href="assets/curriculo-victor.pdf" target="_blank" rel="noopener"><span data-icon="file"></span>Currículo <span>↗</span></a></div></div>
+        </div>
+        <div class="comments-column panel reveal from-right">
+          <div class="comments-panel" data-reveal-sequence><h3 class="reveal reveal-small"><span class="round-icon" data-icon="message"></span> Comentários <span id="comment-count">(0)</span></h3><p class="local-notice reveal reveal-small">Mural local: os comentários ficam apenas neste navegador e não são enviados ao Victor.</p>
+            <form id="comment-form"><label class="reveal reveal-small">Nome <span>*</span><input name="author" placeholder="Digite o seu nome" maxlength="80" required autocomplete="name"></label><label class="reveal reveal-small">Mensagem <span>*</span><textarea name="comment" placeholder="Escreva a sua mensagem aqui..." rows="3" maxlength="1500" required></textarea></label><label class="upload-label reveal reveal-small">Foto de perfil (opcional)<span class="upload-box"><span data-icon="image"></span><span id="upload-text">Escolher foto de perfil</span><input type="file" id="avatar-input" accept="image/png,image/jpeg,image/webp"></span><small>PNG, JPG ou WebP · máximo 5 MB</small></label><button type="submit" class="reveal reveal-small button button-primary full-width"><span data-icon="send"></span> Publicar neste navegador</button><p role="status" id="comment-feedback" class="form-note"></p></form>
+            <div class="reveal reveal-small" id="comments-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year">2026</span> Victor Rogenare. Todos os direitos reservados.</footer>
+  <button class="back-top icon-button" aria-label="Voltar ao início" hidden><span data-icon="arrow-up"></span></button>
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close icon-button" aria-label="Fechar detalhes"><span data-icon="close"></span></button><div id="detail-content"></div></dialog>
+  <dialog id="certificate-dialog" class="certificate-dialog" aria-labelledby="certificate-title"><div class="lightbox-bar"><div><h3 id="certificate-title"></h3><p id="certificate-position"></p></div><a id="certificate-original" class="button button-outline" target="_blank" rel="noopener">Abrir PDF <span data-icon="external"></span></a><button class="dialog-close icon-button" aria-label="Fechar certificado"><span data-icon="close"></span></button></div><div class="lightbox-stage"><button class="certificate-prev icon-button" aria-label="Certificado anterior"><span data-icon="chevron-left"></span></button><img id="certificate-image" alt=""><button class="certificate-next icon-button" aria-label="Próximo certificado"><span data-icon="chevron-right"></span></button></div><p class="lightbox-hint">← → para navegar · Esc para fechar</p></dialog>
+  <noscript><p class="noscript-note">Ative o JavaScript para explorar as abas e ampliar os certificados. O currículo e os contatos continuam disponíveis.</p></noscript>
+</body>
+</html>
