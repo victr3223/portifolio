@@ -1,3 +1,19 @@
+# Abertura em toda visita — 19/10/2026
+
+Removido o controle por `sessionStorage`/`victor-intro` que impedia repetir a abertura. A marca antiga é ignorada, sem apagar ou alterar tema, comentários ou outras chaves. Cada carregamento inicia uma única abertura; `pageshow` reinicia somente quando o navegador restaura o documento pelo cache de navegação (`persisted: true`). Abas internas, tema e navegação por âncoras não estão ligados ao início da abertura.
+
+O visual normal, os três ícones, a logo e os tempos CSS existentes foram preservados: saída com 800 ms após 2,1 s, com encerramento de segurança aos 3 s. Apenas o término da animação do próprio painel encerra a abertura; eventos dos filhos são ignorados. O encerramento cancela o timer e aplica `hidden`, que já possui `display: none !important`. A abertura não altera o bloqueio de rolagem dos diálogos nem o armazenamento. A restauração pelo cache reinicia somente a sobreposição, sem acumular timers.
+
+No modo reduzido, substituída a antiga ocultação completa por saída de opacidade de 150 ms após 200 ms, sem animações dos ícones/texto/logo. O timer de segurança encerra o painel aos 450 ms. Mudar para movimento reduzido durante a abertura também usa o encerramento comum e cancela o timer.
+
+**Regressão:** `tests/intro.test.mjs` executa o bloco real do controlador em uma VM Node com DOM, eventos, relógio e armazenamento simulados. Antes da correção, três dos quatro testes falharam; depois, os 20 testes da suíte passaram. Foram cobertos: primeira entrada; recarregamento com a marca antiga e dados preservados; novo documento/aba com sessão herdada; reabertura com dados locais; ausência de reinício em interações comuns; restauração pelo cache; fim da animação, fallback e cancelamento de timers; conteúdo presente e sem movimento no modo reduzido, conforme regras CSS. O modelo confirma o controle e a preservação de dados, sem afirmar renderização de abas reais.
+
+**Limite visual:** esta alteração não foi observada em um navegador real. O acesso anterior à prévia pelo navegador integrado foi recusado por política de segurança; não foi contornado usando Playwright ou outra superfície. A aparência, a temporização CSS, cliques, rolagem e sessões reais não receberam nova conferência visual nesta etapa. As gravações históricas abaixo são anteriores a esta correção. Os registros desta etapa ficam localmente em `docs/validation-intro-20261019/`, fora do Git.
+
+**GitHub:** na retomada, o repositório estava público e com Pages ativo, diferente do registro inicial de 18/10. Victor confirmou em 19/10 manter o repositório público para preservar o site existente. Essa confirmação substitui a preferência anterior de visibilidade privada nesta atualização.
+
+---
+
 # Cores da Stack Tecnológica — 18/10/2026
 
 Pedido posterior de Victor: restaurar as cores de HTML, CSS, JavaScript, Node.js, Python, Git, Docker e Excel nos dois temas. Removidas as regras de escala de cinza/brilho da classe `.tech-symbol img`, incluindo a sobrescrita do tema claro. Os sete SVG existentes já eram coloridos e foram preservados. O Excel, antes representado pela letra X, usa agora `assets/tech/excel.svg`, obtido do [CDN oficial Microsoft Office](https://res.cdn.office.net/files/fabric-cdn-prod_20240610.001/assets/brand-icons/product/svg/excel_48x1.svg); [licença dos ativos Microsoft Fabric](https://res-1.cdn.office.net/files/fabric/assets/microsoft_fabric_assets_license_agreement_nov_2019.pdf). Esse ativo não é coberto pela licença MIT dos demais SVG.

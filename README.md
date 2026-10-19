@@ -2,13 +2,13 @@
 
 Portfólio de Victor Rogenare, desenvolvido em HTML, CSS e JavaScript, com fontes e imagens locais. Apresenta projetos, certificados, currículo e tecnologias, com temas claro/escuro, navegação por teclado, galeria ampliada e animações de rolagem que respeitam a preferência por movimento reduzido.
 
-Repositório: [victr3223/portifolio](https://github.com/victr3223/portifolio), privado inicialmente. O envio do código ao GitHub não publica um site nem ativa GitHub Pages.
+Repositório: [victr3223/portifolio](https://github.com/victr3223/portifolio), atualmente público. Em 19/10/2026, Victor confirmou manter essa visibilidade para preservar o GitHub Pages já existente.
 
 ## Executar
 
 Requer Git e Node.js 20 ou superior, com npm. Não há dependências npm de produção ou desenvolvimento: os comandos principais usam apenas módulos nativos do Node.js. `package.json` declara os scripts e a versão mínima do Node; não é necessário executar `npm install`.
 
-Com uma conta autorizada a acessar o repositório privado:
+Obtenha o código:
 
 ```powershell
 git clone https://github.com/victr3223/portifolio.git
@@ -28,7 +28,7 @@ npm test
 npm run build
 ```
 
-O build copia o site e `assets/` para `dist/`; não publica nada. Essa pasta é gerada localmente e não entra no Git. Os 16 testes verificam os recursos do site, a integridade dos documentos, o servidor e o controlador das animações.
+O build copia o site e `assets/` para `dist/`; não publica nada. Essa pasta é gerada localmente e não entra no Git. Os 20 testes verificam os recursos do site, a integridade dos documentos, o servidor, o controlador das animações e a abertura a cada visita.
 
 ## Arquivos incluídos
 
@@ -46,6 +46,9 @@ O `.gitignore` exclui dependências instaladas, caches, build, ferramentas baixa
 - `assets/asset-manifest.json`: origem, metadados e hashes dos cinco certificados.
 - `tests/site.test.mjs`: nove testes, incluindo integridade dos PDFs e bloqueio de caminhos privados/streams NTFS.
 - `tests/scroll.test.mjs`: sete regressões do controlador de entradas, sequências, foco, abas, cancelamentos e movimento reduzido.
+- `tests/intro.test.mjs`: quatro regressões da abertura, usando o controlador real com DOM, relógio e armazenamento simulados.
+
+A tela de boas-vindas aparece uma vez por entrada no documento, inclusive em recarregamentos, novas abas e restauração pelo cache de navegação. Ela ignora a antiga marca de primeira visita sem apagar o armazenamento: tema e comentários locais são preservados. Interações com abas, tema e seções não a reiniciam. O movimento normal mantém a sequência e a duração existentes; com movimento reduzido, a tela usa somente uma breve saída por opacidade.
 
 As entradas respondem à posição na tela e respeitam `prefers-reduced-motion`. Para conferir movimento normal quando o navegador de teste força redução, execute `node .tools/motion-preview.mjs` e acesse a prévia isolada em http://127.0.0.1:4322. Verifique antes se essa porta já está em uso. Essa ferramenta é exclusiva de QA, não integra o build nem a versão pública. Encerre-a após o teste; preserve a prévia principal na porta 4321.
 
@@ -65,4 +68,4 @@ Resultados e limites: [docs/VALIDACAO-FINAL.md](docs/VALIDACAO-FINAL.md). As val
 
 O histórico Git começa com o envio do projeto existente. As etapas anteriores foram preservadas nos arquivos e documentadas com backups, pois a pasta ainda não tinha um repositório Git.
 
-Publicação do site e serviços de comentários online são etapas separadas do versionamento privado no GitHub.
+O GitHub Pages existente foi mantido. O mural continua somente local; o repositório público não cria um serviço de publicação ou sincronização de comentários.

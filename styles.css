@@ -26,7 +26,7 @@ main{overflow:clip}
 .input-with-icon>[data-icon] svg{width:15px;height:15px}
 .portrait{transform:perspective(800px) rotateX(var(--portrait-x,0deg)) rotateY(var(--portrait-y,0deg));transition:transform .35s ease,box-shadow .5s}
 .portrait:hover{transform:perspective(800px) rotateX(var(--portrait-x,0deg)) rotateY(var(--portrait-y,0deg)) scale(1.035)}
-@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;animation-delay:0ms!important;transition-duration:.001ms!important;transition-delay:0ms!important}.js .intro{display:none}.js .reveal{opacity:1;transform:none}.type-caret{display:none}.hero-logo{transform:rotate(-6deg)}.js .hero-copy,.js .hero-art{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;animation-delay:0ms!important;transition-duration:.001ms!important;transition-delay:0ms!important}.js .intro{animation:intro-out .15s .2s both!important}.js .intro p,.js .intro img,.js .intro-icons>span{animation:none!important}.js .reveal{opacity:1;transform:none}.type-caret{display:none}.hero-logo{transform:rotate(-6deg)}.js .hero-copy,.js .hero-art{opacity:1;transform:none}}
 
 /* Scroll entries: distances and timing calibrated against the supplied recording. */
 .js.reveals-ready .reveal {

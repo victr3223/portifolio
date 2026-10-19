@@ -43,10 +43,25 @@ const storage = {
   set(key, value) { try { localStorage.setItem(key, value); return true; } catch { return false; } }
 };
 document.documentElement.classList.add('js');
-let introSeen = false;
-try { introSeen = sessionStorage.getItem('victor-intro') === 'seen'; sessionStorage.setItem('victor-intro', 'seen'); } catch {}
-if (introSeen || motion.matches) document.documentElement.classList.add('intro-done');
-else setTimeout(() => { $('.intro').hidden = true; }, 3000);
+const intro = $('.intro');
+let introTimer;
+function finishIntro() {
+  clearTimeout(introTimer);
+  intro.hidden = true;
+}
+function startIntro() {
+  clearTimeout(introTimer);
+  // Reset only this overlay, including a document restored from the back/forward cache.
+  intro.hidden = true;
+  void intro.offsetWidth;
+  intro.hidden = false;
+  introTimer = setTimeout(finishIntro, motion.matches ? 450 : 3000);
+}
+intro.addEventListener('animationend', event => {
+  if (event.target === intro && event.animationName === 'intro-out') finishIntro();
+});
+startIntro();
+addEventListener('pageshow', event => { if (event.persisted) startIntro(); });
 
 const themeButton = $('.theme-toggle');
 function updateTheme() {
@@ -415,7 +430,7 @@ $('#comment-form').addEventListener('submit', async event => {
 motion.addEventListener('change', () => {
   clearTimeout(typingTimer);
   if (motion.matches) {
-    $('#typed-role').textContent = roles[0]; $('.intro').hidden = true;
+    $('#typed-role').textContent = roles[0]; finishIntro();
     cancelAnimationFrame(revealFrame); revealFrame = 0;
     $$('.reveal').forEach(finishReveal);
     portrait.style.setProperty('--portrait-x', '0deg'); portrait.style.setProperty('--portrait-y', '0deg');
